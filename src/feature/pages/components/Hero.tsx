@@ -1,0 +1,97 @@
+import { motion } from 'framer-motion'
+import { siteConfig } from '../../../config/site'
+import { useScrollToSection } from '../../../hooks/useScrollToSection'
+
+export default function Hero() {
+  const scrollToSection = useScrollToSection()
+
+  return (
+    <section
+      id="top"
+      className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-white"
+    >
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="mb-6">
+              <span className="text-xs font-semibold text-emerald-600 tracking-wide">
+                STELLAR-POWERED • BARANGAY CLIMATE FINTECH
+              </span>
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+              Build on Stellar.
+              <br />
+              Operate with JuanaBin.
+            </h1>
+
+            <p className="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
+              Transform household waste segregation into instant, transparent
+              micro-rewards, helping Philippine barangays reduce waste while
+              expanding financial inclusion.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button
+                onClick={() => scrollToSection('#activity')}
+                className="px-6 py-3 rounded-lg bg-emerald-600 text-white font-medium hover:bg-emerald-700 transition-colors"
+              >
+                Launch Pilot Dashboard
+              </button>
+              <a
+                href={siteConfig.links.stellarExplorer}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 rounded-lg border border-slate-300 text-slate-900 font-medium hover:bg-slate-50 transition-colors"
+              >
+                View Stellar Explorer
+              </a>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <div className="bg-gradient-to-br from-emerald-50 to-slate-50 rounded-2xl p-8 border border-emerald-100">
+              <div className="bg-white rounded-xl p-6 shadow-lg">
+                <div className="text-xs font-semibold text-emerald-600 mb-4 flex items-center gap-2">
+                  <span className="w-2 h-2 bg-emerald-500 rounded-full" />
+                  VERIFIED ON STELLAR
+                </div>
+
+                <div className="mb-6">
+                  <p className="text-sm text-slate-500 mb-2">WASTE COLLECTED</p>
+                  <p className="text-4xl font-bold text-slate-900">2.4 kg</p>
+                </div>
+
+                <div className="pt-6 border-t">
+                  <p className="text-sm text-slate-500 mb-2">ESTIMATED REWARD</p>
+                  <p className="text-3xl font-bold text-emerald-600">
+                    + 1.85 JBIN
+                  </p>
+                </div>
+
+                <div className="mt-6">
+                  <motion.div
+                    animate={{ y: [0, -2, 0] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                    className="flex items-center gap-2 text-xs text-emerald-600"
+                  >
+                    <span className="w-2 h-2 bg-emerald-500 rounded-full" />
+                    Transaction recorded
+                  </motion.div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  )
+}
