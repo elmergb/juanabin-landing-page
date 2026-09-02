@@ -3,6 +3,7 @@ import { Leaf, Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { primaryNavigation, siteConfig } from "../../config/site";
 import { useScrollToSection } from "../../hooks/useScrollToSection";
+import juanabinlogo from "../../assets/juanabin-logo.png"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +34,7 @@ export default function Navbar() {
           aria-label={`${siteConfig.name} home`}
         >
           <img
-            src="/src/assets/juanabin-logo.png"
+            src={juanabinlogo}
             alt="JuanaBin PH"
             className="w-8 h-8"
           />
