@@ -15,7 +15,7 @@ src/
   hooks/                Reusable React behavior
   pages/                Route-level page entry points
   assets/               Imported static assets
-  main.jsx              Browser entry point
+  main.tsx              Browser entry point
 ```
 
 ### Placement rules
@@ -29,7 +29,7 @@ src/
 - Keep API clients in `src/services` and keep network calls out of UI components.
 - Keep shared types in `src/types`; feature-only types stay with their feature.
 
-The current landing page remains at `src/feature/pages/LandingPage.tsx` as a compatibility source during incremental section extraction. `src/pages/LandingPage.jsx` is the public page boundary, so future refactors do not need to change the app shell.
+The current landing page remains at `src/feature/pages/LandingPage.tsx` as the feature implementation. `src/pages/LandingPage.tsx` is the public page boundary, so future refactors do not need to change the app shell.
 
 ## Development
 

@@ -1,12 +1,12 @@
-import { motion } from 'framer-motion'
-import { AnimatedCounter } from '../../../components/ui/AnimatedCounter'
+import { motion } from "framer-motion";
+import { AnimatedCounter } from "../../../components/ui/AnimatedCounter";
 
 const metrics = [
-  { label: 'Waste Diverted', value: 15.4, suffix: ' kg' },
-  { label: 'On-Chain Transactions', value: 50, suffix: '+' },
-  { label: 'Active Pilot Households', value: 10, suffix: '+' },
-  { label: 'CO2e Estimated Avoided', value: 32.5, suffix: ' kg' },
-]
+  { label: "Waste Diverted", value: 15.4, suffix: " kg" },
+  { label: "On-Chain Transactions", value: 50, suffix: "+" },
+  { label: "Active Pilot Households", value: 10, suffix: "+" },
+  { label: "CO2e Estimated Avoided", value: 32.5, suffix: " kg" },
+];
 
 export default function MetricsTicker() {
   return (
@@ -34,5 +34,5 @@ export default function MetricsTicker() {
         </div>
       </div>
     </section>
-  )
+  );
 }

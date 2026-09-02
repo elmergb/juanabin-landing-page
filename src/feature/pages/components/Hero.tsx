@@ -1,15 +1,12 @@
-import { motion } from 'framer-motion'
-import { siteConfig } from '../../../config/site'
-import { useScrollToSection } from '../../../hooks/useScrollToSection'
+import { motion } from "framer-motion";
+import { siteConfig } from "../../../config/site";
+import { useScrollToSection } from "../../../hooks/useScrollToSection";
 
 export default function Hero() {
-  const scrollToSection = useScrollToSection()
+  const scrollToSection = useScrollToSection();
 
   return (
-    <section
-      id="top"
-      className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-white"
-    >
+    <section id="top" className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -37,7 +34,7 @@ export default function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <button
-                onClick={() => scrollToSection('#activity')}
+                onClick={() => scrollToSection("#activity")}
                 className="px-6 py-3 rounded-lg bg-emerald-600 text-white font-medium hover:bg-emerald-700 transition-colors"
               >
                 Launch Pilot Dashboard
@@ -71,7 +68,9 @@ export default function Hero() {
                 </div>
 
                 <div className="pt-6 border-t">
-                  <p className="text-sm text-slate-500 mb-2">ESTIMATED REWARD</p>
+                  <p className="text-sm text-slate-500 mb-2">
+                    ESTIMATED REWARD
+                  </p>
                   <p className="text-3xl font-bold text-emerald-600">
                     + 1.85 JBIN
                   </p>
@@ -93,5 +92,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }

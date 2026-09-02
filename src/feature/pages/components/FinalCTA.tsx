@@ -1,9 +1,9 @@
-import { motion } from 'framer-motion'
-import { siteConfig } from '../../../config/site'
-import { useScrollToSection } from '../../../hooks/useScrollToSection'
+import { motion } from "framer-motion";
+import { siteConfig } from "../../../config/site";
+import { useScrollToSection } from "../../../hooks/useScrollToSection";
 
 export default function FinalCTA() {
-  const scrollToSection = useScrollToSection()
+  const scrollToSection = useScrollToSection();
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
@@ -23,7 +23,7 @@ export default function FinalCTA() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
-              onClick={() => scrollToSection('#activity')}
+              onClick={() => scrollToSection("#activity")}
               className="px-8 py-4 rounded-lg bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition-colors"
             >
               Launch Pilot Dashboard
@@ -38,5 +38,5 @@ export default function FinalCTA() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
