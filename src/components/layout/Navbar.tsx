@@ -15,7 +15,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNavigation = (href) => {
+  const handleNavigation = (href :string) => {
     setIsOpen(false);
     scrollToSection(href);
   };
@@ -32,7 +32,11 @@ export default function Navbar() {
           className="flex items-center gap-2"
           aria-label={`${siteConfig.name} home`}
         >
-          <Leaf className="w-6 h-6 text-emerald-600" />
+          <img
+            src="/src/assets/juanabin-logo.png"
+            alt="JuanaBin PH"
+            className="w-8 h-8"
+          />
           <span className="text-lg font-bold text-slate-900">
             {siteConfig.name}
           </span>
