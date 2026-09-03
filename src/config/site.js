@@ -17,7 +17,7 @@ export const primaryNavigation = [
   { label: 'Features', href: '#features' },
   { label: 'How It Works', href: '#how-it-works' },
   { label: 'Calculator', href: '#calculator' },
-  { label: 'Why BusloPH', href: '#why-juanabin' },
+  { label: 'Why JuanaBin PH', href: '#why-juanabin' },
   { label: 'Live Activity', href: '#activity' },
   { label: 'FAQ', href: '#faq' },
 ]

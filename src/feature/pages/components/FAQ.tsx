@@ -19,14 +19,14 @@ const faqs = [
       "Because habits aren't built through rules - they're built through repetition, feedback, and reward. Fines and instructions haven't worked. Making segregation fun and rewarding creates automatic behavior that lasts. Over time, the reward becomes optional. The habit is the real product.",
   },
   {
-    question: "What waste types does BusloPH sort?",
+    question: "What waste types does JuanaBin PH sort?",
     answer:
-      "BusloPH sorts waste into three categories mirroring RA 9003 compliance: biodegradable, non-biodegradable, and food waste, with focused detection on high-value recyclables like PET bottles, plastics, and sachets.",
+      "JuanaBin PH sorts waste into three categories mirroring RA 9003 compliance: biodegradable, non-biodegradable, and food waste, with focused detection on high-value recyclables like PET bottles, plastics, and sachets.",
   },
   {
     question: "How does this help solve the Philippines' waste problem?",
     answer:
-      "Contaminated recyclables raise sorting costs for LGUs. Plastics end up in rivers instead of being recovered. Every LGU must implement segregation under RA 9003 but most struggle. BusloPH makes compliance automatic through habit formation, not enforcement.",
+      "Contaminated recyclables raise sorting costs for LGUs. Plastics end up in rivers instead of being recovered. Every LGU must implement segregation under RA 9003 but most struggle. JuanaBin PH makes compliance automatic through habit formation, not enforcement.",
   },
 ];
 

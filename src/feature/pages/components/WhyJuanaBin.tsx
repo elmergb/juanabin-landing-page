@@ -34,7 +34,7 @@ export default function WhyJuanaBin() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-900 mb-4">
-            Why BusloPH Works
+            Why JuanaBin PH Works
           </h2>
           <p className="text-lg text-slate-600">
             Because habits aren't built through rules and fines. 
