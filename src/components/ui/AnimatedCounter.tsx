@@ -1,13 +1,23 @@
 import { useEffect, useState } from "react";
 
-export function AnimatedCounter({ end, duration = 2, suffix = "" }) {
+type AnimatedCounterProps = {
+  end: number;
+  duration?: number;
+  suffix?: string;
+};
+
+export function AnimatedCounter({
+  end,
+  duration = 2,
+  suffix = "",
+}: AnimatedCounterProps) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    let animationFrame;
-    let startTime;
+    let animationFrame: number;
+    let startTime: number | undefined;
 
-    const animate = (currentTime) => {
+    const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min(
         (currentTime - startTime) / (duration * 1000),

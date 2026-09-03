@@ -4,7 +4,7 @@ export const siteConfig = {
   links: {
     website: 'https://juanabin.ph',
     github: 'https://github.com/buslongpagasa/juanabin-ph',
-    stellarExplorer: 'https://stellar.expert/explorer/testnet/home',
+    stellarExplorer: 'https://stellar.expert/explorer/testnet',
     contact: 'mailto:buslongpagasa@gmail.com',
   },
 }
