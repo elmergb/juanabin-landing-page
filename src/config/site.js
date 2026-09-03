@@ -3,9 +3,9 @@ export const siteConfig = {
   tagline: 'Segregate. Earn. Build a cleaner community.',
   links: {
     website: 'https://juanabin.ph',
-    github: 'https://github.com/buslongpagasa/juanabin-ph',
+    github: 'https://github.com/elmergb/juanabin-website',
     stellarExplorer: 'https://stellar.expert/explorer/testnet',
-    contact: 'mailto:buslongpagasa@gmail.com',
+    contact: 'bantoyelmer2@gmail.com',
   },
 }
 
