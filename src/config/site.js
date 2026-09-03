@@ -2,7 +2,7 @@ export const siteConfig = {
   name: 'JuanaBin PH',
   tagline: 'Segregate. Earn. Build a cleaner community.',
   links: {
-    website: 'https://juanabin.ph',
+    website: 'https://juanabin-website-git-main-elmergbs-projects.vercel.app/',
     github: 'https://github.com/elmergb/juanabin-website',
     stellarExplorer: 'https://stellar.expert/explorer/testnet',
     contact: 'bantoyelmer2@gmail.com',
