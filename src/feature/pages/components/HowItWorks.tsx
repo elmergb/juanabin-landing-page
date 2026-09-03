@@ -5,21 +5,21 @@ export default function HowItWorks() {
   const steps = [
     {
       icon: Leaf,
-      title: "Segregate at Home",
+      title: "Approach the Bin",
       description:
-        "Separate household waste into accepted categories such as biodegradable, recyclable paper, and recyclable plastic.",
+        "Walk up to the JuanaBin smart bin with your segregated waste - biodegradable, non-biodegradable, or high-value recyclables like PET bottles and sachets.",
     },
     {
       icon: Scan,
-      title: "Scan & Log",
+      title: "Shoot Like Basketball",
       description:
-        "The smart JuanaBin uses Camera IoT technology to automatically detect waste type, verify proper segregation, and weigh collected materials. The smart lid only opens when correct waste is detected.",
+        '"Shoot" your trash toward the basketball-hoop opening. AI sensors detect the waste type in real-time. Sort right? The hoop opens and you score. Sort wrong? The bin stays closed - no penalty, just try the correct bin.',
     },
     {
       icon: WalletCards,
-      title: "Earn & Redeem",
+      title: "Earn QR Rewards",
       description:
-        "Earn reward points for every proper disposal, viewable through the mobile app. Redeem points at partner stores like 7-11 for local artisan products and community goods.",
+        "Get instant QR code rewards redeemable like cash at partner convenience stores (7-11). Repeated correct action builds automatic habits. Over time, segregation becomes natural.",
     },
   ];
 
@@ -69,11 +69,11 @@ export default function HowItWorks() {
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center">
             {[
-              "Segregate Waste",
-              "Camera Detects",
-              "Smart Bin Validates",
-              "Earn Points",
-              "Redeem Rewards",
+              "Approach Bin",
+              "Shoot Trash 🏀",
+              "AI Detects",
+              "Hoop Opens",
+              "Earn QR Reward",
             ].map((label, idx) => (
               <div key={label} className="contents">
                 <div

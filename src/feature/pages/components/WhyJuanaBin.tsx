@@ -1,30 +1,30 @@
-import { Camera, Smartphone, Recycle, TrendingUp } from "lucide-react";
+import { Target, Gift, Lock, Lightbulb } from "lucide-react";
 import { motion } from "framer-motion";
 
 const features = [
   {
-    icon: Camera,
-    title: "Camera IoT Technology",
+    icon: Target,
+    title: "Basketball Hoop Design",
     description:
-      "Advanced camera system automatically identifies waste type, validates proper segregation, and measures weight with 98% accuracy - no manual verification needed.",
+      'The gamified "shoot your trash" mechanic makes waste disposal fun and memorable. Users naturally want to participate because it feels like play, not a chore.',
   },
   {
-    icon: Smartphone,
-    title: "Mobile App Integration",
+    icon: Lock,
+    title: "Smart Lock/Unlock System",
     description:
-      "Track your waste disposal, view reward points, redeem at partner stores like 7-11, and monitor your environmental impact through our intuitive mobile app.",
+      "Sort right - the hoop opens, you score. Sort wrong - the bin won't open. No penalty, just a gentle nudge to try the right bin. Real-time AI feedback shapes behavior.",
   },
   {
-    icon: Recycle,
-    title: "Smart Lid System",
+    icon: Gift,
+    title: "QR Rewards Like Cash",
     description:
-      "Intelligent lid only opens when correct waste type is detected, ensuring proper segregation. Built-in compaction reduces volume and odor control keeps bins fresh.",
+      "Earn QR code rewards redeemable at convenience stores like 7-11. Tangible value for proper disposal creates instant positive reinforcement that builds habits.",
   },
   {
-    icon: TrendingUp,
-    title: "Real Rewards",
+    icon: Lightbulb,
+    title: "Habit Formation, Not Rules",
     description:
-      "Earn points for every proper disposal, redeemable at local stores and partner establishments. Your waste becomes valuable community currency.",
+      "Repetition + Feedback + Reward = Automatic behavior. Over time, the reward becomes optional. The habit is the real product. Segregation becomes second nature.",
   },
 ];
 
@@ -34,11 +34,11 @@ export default function WhyJuanaBin() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-900 mb-4">
-            Why JuanaBin?
+            Why BusloPH Works
           </h2>
           <p className="text-lg text-slate-600">
-            Smart technology that makes waste segregation effortless, 
-            rewarding, and impactful for every Filipino household.
+            Because habits aren't built through rules and fines. 
+            They're built through repetition, feedback, and reward.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-8">

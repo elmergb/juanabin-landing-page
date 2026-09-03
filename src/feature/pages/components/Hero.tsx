@@ -16,20 +16,20 @@ export default function Hero() {
           >
             <div className="mb-6">
               <span className="text-xs font-semibold text-emerald-600 tracking-wide">
-                SMART BIN TECHNOLOGY • CAMERA IOT POWERED
+                AI-POWERED • GAMIFIED SMART BIN
               </span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-              Smart Waste Management.
+              Basket of Hope.
               <br />
-              Powered by JuanaBin.
+              Sort Right. Shoot Like a Champion.
             </h1>
 
             <p className="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
-              Revolutionary smart bin with Camera IoT technology that automatically
-              detects, validates, and weighs waste, rewarding proper segregation
-              and building cleaner Philippine communities.
+              JuanaBin turns waste disposal into a game. "Shoot" your trash like basketball,
+              AI sensors detect if it's correct, the hoop opens, and you earn rewards
+              redeemable at stores like 7-11. Building habits through fun, not fines.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -60,23 +60,23 @@ export default function Hero() {
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="text-xs font-semibold text-emerald-600 mb-4 flex items-center gap-2">
                   <span className="w-2 h-2 bg-emerald-500 rounded-full" />
-                  SMART BIN ACTIVE
+                  🏀 SHOT SCORED!
                 </div>
 
                 <div className="mb-6">
                   <p className="text-sm text-slate-500 mb-2">WASTE DETECTED</p>
-                  <p className="text-4xl font-bold text-slate-900">2.4 kg</p>
-                  <p className="text-sm text-slate-600 mt-1">PET Plastic</p>
+                  <p className="text-4xl font-bold text-slate-900">850g</p>
+                  <p className="text-sm text-slate-600 mt-1">PET Bottle ✓</p>
                 </div>
 
                 <div className="pt-6 border-t">
                   <p className="text-sm text-slate-500 mb-2">
-                    REWARD POINTS
+                    QR REWARD EARNED
                   </p>
                   <p className="text-3xl font-bold text-emerald-600">
-                    + 240 pts
+                    + 85 pts
                   </p>
-                  <p className="text-xs text-slate-500 mt-1">Redeemable at 7-11</p>
+                  <p className="text-xs text-slate-500 mt-1">Use like cash at 7-11</p>
                 </div>
 
                 <div className="mt-6">
@@ -86,7 +86,7 @@ export default function Hero() {
                     className="flex items-center gap-2 text-xs text-emerald-600"
                   >
                     <span className="w-2 h-2 bg-emerald-500 rounded-full" />
-                    Camera validated • 98% accuracy
+                    AI validated • Hoop opened • Habit formed
                   </motion.div>
                 </div>
               </div>

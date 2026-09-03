@@ -4,29 +4,29 @@ import { motion } from "framer-motion";
 
 const faqs = [
   {
-    question: "How does the Camera IoT technology work?",
+    question: "How does the basketball hoop mechanic work?",
     answer:
-      "JuanaBin's smart bin uses advanced camera sensors and AI to automatically identify waste types (plastic, paper, organic, metal, glass), validate proper segregation, and measure weight with 98% accuracy. The smart lid only opens when the correct waste type is detected.",
+      'You "shoot" your trash toward the bin like a basketball shot. AI sensors detect the waste type in real-time. If you sort correctly, the hoop opens and you score points. If you sort wrong, the bin stays closed with no penalty - just a gentle nudge to try the right bin.',
   },
   {
-    question: "What rewards can I earn and where can I redeem them?",
+    question: "What rewards do I get and where can I use them?",
     answer:
-      "You earn points for every proper waste disposal (100 points = 1kg of recyclable plastic). Points are redeemable at partner stores like 7-11, local artisan shops, and community stores for products and goods.",
+      "You earn QR code rewards redeemable like cash at partner convenience stores such as 7-11. The rewards provide instant positive reinforcement that builds automatic segregation habits over time.",
   },
   {
-    question: "How does this help my barangay and the environment?",
+    question: "Why use gamification instead of fines and rules?",
     answer:
-      "JuanaBin encourages proper household waste segregation, reduces landfill waste, improves recycling rates, creates community-level incentives, and provides data to help barangays track their environmental impact and waste diversion efforts.",
+      "Because habits aren't built through rules - they're built through repetition, feedback, and reward. Fines and instructions haven't worked. Making segregation fun and rewarding creates automatic behavior that lasts. Over time, the reward becomes optional. The habit is the real product.",
   },
   {
-    question: "Do I need any technical knowledge to use JuanaBin?",
+    question: "What waste types does BusloPH sort?",
     answer:
-      "No technical knowledge required! Simply segregate your waste at home and dispose it in the JuanaBin smart bin. The bin's Camera IoT handles all detection and validation automatically. Track your points through our easy-to-use mobile app.",
+      "BusloPH sorts waste into three categories mirroring RA 9003 compliance: biodegradable, non-biodegradable, and food waste, with focused detection on high-value recyclables like PET bottles, plastics, and sachets.",
   },
   {
-    question: "What types of waste does JuanaBin accept?",
+    question: "How does this help solve the Philippines' waste problem?",
     answer:
-      "JuanaBin smart bins accept biodegradable waste, recyclable paper, PET plastic bottles, sachets, metal cans, and glass containers. Each bin can identify and validate the waste type automatically using Camera IoT technology.",
+      "Contaminated recyclables raise sorting costs for LGUs. Plastics end up in rivers instead of being recovered. Every LGU must implement segregation under RA 9003 but most struggle. BusloPH makes compliance automatic through habit formation, not enforcement.",
   },
 ];
 
