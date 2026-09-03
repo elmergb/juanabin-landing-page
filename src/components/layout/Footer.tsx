@@ -1,5 +1,6 @@
 import { Leaf } from "lucide-react";
 import { siteConfig } from "../../config/site";
+import juanabinLogo from "../../assets/juanabin-logo.png";
 
 export default function Footer() {
   const { links } = siteConfig;
@@ -10,7 +11,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 gap-12 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Leaf className="w-6 h-6 text-emerald-400" />
+              <img
+                src={juanabinLogo}
+                alt="JuanaBin PH"
+                className="w-8 h-8"
+              />
               <span className="text-lg font-bold">{siteConfig.name}</span>
             </div>
             <p className="text-slate-400">{siteConfig.tagline}</p>

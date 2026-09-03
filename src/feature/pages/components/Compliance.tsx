@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+// import jsPDF from "jspdf";
 
 const complianceItems = [
   "Waste diversion records",
@@ -8,6 +9,42 @@ const complianceItems = [
   "Digital audit trails",
   "Exportable reports",
 ];
+
+const reportRows = [
+  ["Reporting Period", "August 2026"],
+  ["Total Waste Collected (kg)", "128.4"],
+  ["Households Participating", "47"],
+  ["Estimated CO2e Avoided (kg)", "214.6"],
+  ["JBIN Distributed", "86.7"],
+];
+
+function escapeCsvValue(value: string) {
+  return `"${value.replaceAll('"', '""')}"`;
+}
+
+function exportReportCsv() {
+  const csv = [["Metric", "Value"], ...reportRows]
+    .map((row) => row.map(escapeCsvValue).join(","))
+    .join("\r\n");
+  const blob = new Blob([`\uFEFF${csv}\r\n`], { type: "text/csv;charset=utf-8" });
+  const downloadUrl = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+
+  link.href = downloadUrl;
+  link.download = "barangay-waste-diversion-report.csv";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(downloadUrl);
+}
+
+function generateReportPdf() {
+  alert("PDF export will be available soon. Please use CSV export for now.");
+  /* 
+  const pdfDocument = new jsPDF();
+  ... rest of PDF code ...
+  */
+}
 
 export default function Compliance() {
   return (
@@ -92,10 +129,18 @@ export default function Compliance() {
                 </div>
               </div>
               <div className="flex gap-3 mt-6">
-                <button className="flex-1 px-3 py-2 bg-emerald-600 text-white text-xs font-semibold rounded-lg hover:bg-emerald-700 transition-colors">
+                <button
+                  type="button"
+                  onClick={exportReportCsv}
+                  className="flex-1 px-3 py-2 bg-emerald-600 text-white text-xs font-semibold rounded-lg hover:bg-emerald-700 transition-colors"
+                >
                   Export CSV
                 </button>
-                <button className="flex-1 px-3 py-2 bg-slate-200 text-slate-900 text-xs font-semibold rounded-lg hover:bg-slate-300 transition-colors">
+                <button
+                  type="button"
+                  onClick={generateReportPdf}
+                  className="flex-1 px-3 py-2 bg-slate-200 text-slate-900 text-xs font-semibold rounded-lg hover:bg-slate-300 transition-colors"
+                >
                   Generate PDF
                 </button>
               </div>
