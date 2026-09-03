@@ -1,22 +1,19 @@
-import { Leaf, Scan, WalletCards } from "lucide-react";
 import { motion } from "framer-motion";
+import juanabinLogo from "../../../assets/juanabin-logo.png";
 
 export default function HowItWorks() {
   const steps = [
     {
-      icon: Leaf,
       title: "Approach the Bin",
       description:
         "Walk up to the JuanaBin PH smart bin with your segregated waste. We focus on 3 categories: PET bottles, plastic sachets, and food waste - materials our community partners transform into valuable products instead of sending to landfills.",
     },
     {
-      icon: Scan,
       title: "Shoot Like Basketball",
       description:
         '"Shoot" your trash toward the basketball-hoop opening. AI sensors detect the waste type in real-time. Sort right? The hoop opens and you score. Sort wrong? The bin stays closed - no penalty, just try the correct bin.',
     },
     {
-      icon: WalletCards,
       title: "Earn QR Rewards",
       description:
         "Get instant QR code rewards redeemable like cash at partner convenience stores (7-11). All rewards are verified on Stellar blockchain for transparency. Repeated correct action builds automatic habits. Over time, segregation becomes natural.",
@@ -37,7 +34,6 @@ export default function HowItWorks() {
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((step, idx) => {
-            const Icon = step.icon;
             return (
               <motion.div
                 key={step.title}
@@ -45,17 +41,27 @@ export default function HowItWorks() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-slate-50 to-emerald-50 rounded-xl p-8 hover:shadow-lg transition-shadow"
+                className="bg-gradient-to-br from-slate-50 to-emerald-50 rounded-xl p-8 hover:shadow-lg transition-shadow relative"
               >
-                <div className="w-12 h-12 bg-emerald-600 rounded-lg flex items-center justify-center mb-6">
-                  <Icon className="w-6 h-6 text-white" />
+                {/* JuanaBin Logo in Circle */}
+                <div className="absolute -top-8 left-1/2 -translate-x-1/2">
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg p-2 border-2 border-emerald-200">
+                    <img 
+                      src={juanabinLogo} 
+                      alt="JuanaBin PH" 
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-slate-600 leading-relaxed">
-                  {step.description}
-                </p>
+                
+                <div className="mt-8">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
               </motion.div>
             );
           })}
