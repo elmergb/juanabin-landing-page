@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { jsPDF } from "jspdf";
 
 const complianceItems = [
   "Waste diversion records",
@@ -35,6 +36,71 @@ function exportReportCsv() {
   link.click();
   link.remove();
   URL.revokeObjectURL(downloadUrl);
+}
+
+function generateReportPdf() {
+  const pdfDocument = new jsPDF();
+  const pageWidth = pdfDocument.internal.pageSize.getWidth();
+  const tableLeft = 20;
+  const tableWidth = pageWidth - tableLeft * 2;
+  const rowHeight = 12;
+
+  pdfDocument.setFillColor(5, 150, 105);
+  pdfDocument.rect(0, 0, pageWidth, 42, "F");
+  pdfDocument.setTextColor(255, 255, 255);
+  pdfDocument.setFont("helvetica", "bold");
+  pdfDocument.setFontSize(19);
+  pdfDocument.text("JuanaBin", tableLeft, 17);
+  pdfDocument.setFontSize(13);
+  pdfDocument.text("Barangay Waste Diversion Report", tableLeft, 29);
+  pdfDocument.setFont("helvetica", "normal");
+  pdfDocument.setFontSize(9);
+  pdfDocument.text("Environmental records and impact summary", tableLeft, 36);
+
+  pdfDocument.setTextColor(71, 85, 105);
+  pdfDocument.setFontSize(9);
+  pdfDocument.text("REPORTING PERIOD", tableLeft, 57);
+  pdfDocument.setTextColor(15, 23, 42);
+  pdfDocument.setFont("helvetica", "bold");
+  pdfDocument.setFontSize(12);
+  pdfDocument.text("August 2026", tableLeft, 65);
+
+  const tableTop = 78;
+  pdfDocument.setFillColor(15, 23, 42);
+  pdfDocument.roundedRect(tableLeft, tableTop, tableWidth, rowHeight, 2, 2, "F");
+  pdfDocument.setTextColor(255, 255, 255);
+  pdfDocument.setFontSize(10);
+  pdfDocument.text("METRIC", tableLeft + 6, tableTop + 8);
+  pdfDocument.text("VALUE", tableLeft + tableWidth - 45, tableTop + 8);
+
+  reportRows.slice(1).forEach(([metric, value], index) => {
+    const rowTop = tableTop + rowHeight + index * rowHeight;
+    pdfDocument.setFillColor(index % 2 === 0 ? 240 : 255, 253, 250);
+    pdfDocument.rect(tableLeft, rowTop, tableWidth, rowHeight, "F");
+    pdfDocument.setDrawColor(226, 232, 240);
+    pdfDocument.line(tableLeft, rowTop + rowHeight, tableLeft + tableWidth, rowTop + rowHeight);
+    pdfDocument.setTextColor(51, 65, 85);
+    pdfDocument.setFont("helvetica", "normal");
+    pdfDocument.text(metric, tableLeft + 6, rowTop + 8);
+    pdfDocument.setFont("helvetica", "bold");
+    pdfDocument.setTextColor(5, 150, 105);
+    pdfDocument.text(value, tableLeft + tableWidth - 45, rowTop + 8);
+  });
+
+  pdfDocument.setTextColor(100, 116, 139);
+  pdfDocument.setFont("helvetica", "normal");
+  pdfDocument.setFontSize(8);
+  pdfDocument.text(
+    "Prepared by JuanaBin | For documentation and reporting purposes",
+    tableLeft,
+    155,
+  );
+  pdfDocument.setDrawColor(203, 213, 225);
+  pdfDocument.line(tableLeft, 160, pageWidth - tableLeft, 160);
+  pdfDocument.text("Generated September 3, 2026", tableLeft, 170);
+  pdfDocument.text("RA 9003 and EPR Act reporting support", tableLeft, 177);
+
+  pdfDocument.save("barangay-waste-diversion-report.pdf");
 }
 
 export default function Compliance() {
@@ -127,7 +193,11 @@ export default function Compliance() {
                 >
                   Export CSV
                 </button>
-                <button className="flex-1 px-3 py-2 bg-slate-200 text-slate-900 text-xs font-semibold rounded-lg hover:bg-slate-300 transition-colors">
+                <button
+                  type="button"
+                  onClick={generateReportPdf}
+                  className="flex-1 px-3 py-2 bg-slate-200 text-slate-900 text-xs font-semibold rounded-lg hover:bg-slate-300 transition-colors"
+                >
                   Generate PDF
                 </button>
               </div>
