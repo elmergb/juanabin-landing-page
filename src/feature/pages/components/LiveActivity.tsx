@@ -4,31 +4,53 @@ import { siteConfig } from "../../../config/site";
 const transactions = [
   {
     time: "21:42",
-    officer: "BIN-014",
-    type: "PET Plastic",
-    weight: "850 g",
-    jbin: 85,
+    user: "Juan Dela Cruz",
+    binId: "BIN-014",
+    type: "Clear PET Bottle",
+    quantity: "15 pcs",
+    points: 150,
+    phpValue: "₱15.00",
+    co2Saved: 0.6,
   },
   {
     time: "21:37",
-    officer: "BIN-009",
-    type: "Sachet",
-    weight: "420 g",
-    jbin: 42,
+    user: "Maria Santos",
+    binId: "BIN-009",
+    type: "Colored PET Bottle",
+    quantity: "20 pcs",
+    points: 140,
+    phpValue: "₱14.00",
+    co2Saved: 0.7,
   },
   {
     time: "21:31",
-    officer: "BIN-021",
-    type: "Organic",
-    weight: "1.2 kg",
-    jbin: 120,
+    user: "Carlo Reyes",
+    binId: "BIN-021",
+    type: "Clear PET Bottle",
+    quantity: "25 pcs",
+    points: 250,
+    phpValue: "₱25.00",
+    co2Saved: 1.0,
   },
   {
     time: "21:25",
-    officer: "BIN-006",
-    type: "PET Plastic",
-    weight: "650 g",
-    jbin: 65,
+    user: "Ana Lim",
+    binId: "BIN-006",
+    type: "Plastic Sachet Bundle",
+    quantity: "100 pcs",
+    points: 150,
+    phpValue: "₱15.00",
+    co2Saved: 0.5,
+  },
+  {
+    time: "21:18",
+    user: "Demo User",
+    binId: "BIN-003",
+    type: "Food Waste",
+    quantity: "1 kg",
+    points: 15,
+    phpValue: "₱1.50",
+    co2Saved: 0.5,
   },
 ];
 
@@ -68,11 +90,13 @@ export default function LiveActivity() {
               <thead>
                 <tr className="bg-slate-50 border-b">
                   {[
-                    "Timestamp",
+                    "Time",
+                    "User",
                     "Bin ID",
                     "Waste Type",
-                    "Weight",
+                    "Quantity",
                     "Points",
+                    "CO₂ Saved",
                     "Details",
                   ].map((heading) => (
                     <th
@@ -85,25 +109,31 @@ export default function LiveActivity() {
                 </tr>
               </thead>
               <tbody>
-                {transactions.map((tx) => (
+                {transactions.map((tx, idx) => (
                   <tr
-                    key={`${tx.time}-${tx.officer}`}
+                    key={`${tx.time}-${tx.binId}-${idx}`}
                     className="border-b hover:bg-slate-50"
                   >
                     <td className="px-6 py-4 text-sm text-slate-900">
                       {tx.time}
                     </td>
-                    <td className="px-6 py-4 text-sm text-slate-900 font-mono">
-                      {tx.officer}
+                    <td className="px-6 py-4 text-sm text-slate-900 font-medium">
+                      {tx.user}
+                    </td>
+                    <td className="px-6 py-4 text-sm text-slate-600 font-mono">
+                      {tx.binId}
                     </td>
                     <td className="px-6 py-4 text-sm text-slate-600">
                       {tx.type}
                     </td>
                     <td className="px-6 py-4 text-sm text-slate-600">
-                      {tx.weight}
+                      {tx.quantity}
                     </td>
                     <td className="px-6 py-4 text-sm font-semibold text-emerald-600">
-                      {tx.jbin} pts
+                      {tx.points} pts
+                    </td>
+                    <td className="px-6 py-4 text-sm font-semibold text-blue-600">
+                      {tx.co2Saved} kg
                     </td>
                     <td className="px-6 py-4">
                       <TransactionLink />
@@ -114,9 +144,9 @@ export default function LiveActivity() {
             </table>
           </div>
           <div className="md:hidden p-4 space-y-4">
-            {transactions.map((tx) => (
+            {transactions.map((tx, idx) => (
               <div
-                key={`${tx.time}-${tx.officer}`}
+                key={`${tx.time}-${tx.binId}-${idx}`}
                 className="bg-slate-50 rounded-lg p-4 border"
               >
                 <div className="flex justify-between mb-2">
@@ -125,20 +155,36 @@ export default function LiveActivity() {
                   </span>
                   <TransactionLink />
                 </div>
-                <p className="font-semibold text-slate-900 mb-1">{tx.type}</p>
-                <div className="flex justify-between text-sm">
-                  <span className="text-slate-600">{tx.weight}</span>
-                  <span className="font-semibold text-emerald-600">
-                    {tx.jbin} pts
-                  </span>
+                <p className="font-semibold text-slate-900 mb-1">{tx.user}</p>
+                <p className="text-sm text-slate-600 mb-2">{tx.type}</p>
+                <div className="grid grid-cols-2 gap-2 text-sm">
+                  <div>
+                    <span className="text-xs text-slate-500">Quantity:</span>
+                    <p className="text-slate-900">{tx.quantity}</p>
+                  </div>
+                  <div>
+                    <span className="text-xs text-slate-500">Points:</span>
+                    <p className="font-semibold text-emerald-600">{tx.points} pts</p>
+                  </div>
+                  <div>
+                    <span className="text-xs text-slate-500">CO₂ Saved:</span>
+                    <p className="font-semibold text-blue-600">{tx.co2Saved} kg</p>
+                  </div>
+                  <div>
+                    <span className="text-xs text-slate-500">Value:</span>
+                    <p className="text-slate-900">{tx.phpValue}</p>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
         <div className="mt-6 text-center">
-          <span className="inline-block bg-slate-100 text-slate-600 text-xs font-semibold px-3 py-1 rounded-full">
-            DEMO DATA
+          <p className="text-sm text-slate-600 mb-2">
+            <strong>Total Impact:</strong> 705 points (₱70.50) • 3.3 kg CO₂ saved
+          </p>
+          <span className="inline-block bg-emerald-100 text-emerald-700 text-xs font-semibold px-3 py-1 rounded-full">
+            AWS CAPSTONE 2026 DEMO DATA
           </span>
         </div>
       </div>

@@ -218,6 +218,42 @@ flowchart LR
 ### Data Pipeline
 Excel → Python ETL → AWS DynamoDB → AWS S3 (public) → GitHub → React/Flutter Frontend
 
+## 📌 Technical Implementation Highlights
+
+### Excel → AWS Pipeline
+
+This shows how the Excel demo data was connected to AWS services and made publicly accessible for frontend developers:
+
+```
+Excel File (Demo Data)
+         ↓
+Python ETL Script
+         ↓
+AWS DynamoDB (NoSQL Database)
+         ↓
+AWS S3 (Public Bucket)
+         ↓
+GitHub Repository (Public)
+         ↓
+Frontend Integration (React/Flutter)
+```
+
+**Data Flow Summary:**
+1. **Excel File**: Contains demo data (5 users, 161 kg waste, 1,009 points, 10.75 kg CO₂ saved)
+2. **Python ETL Script**: Extracts, transforms, and loads data from Excel to AWS
+3. **AWS DynamoDB**: NoSQL database stores user profiles, transactions, reward schedules
+4. **AWS S3**: Public bucket hosts static assets, reports, and exportable data
+5. **GitHub Repository**: Version control and public code sharing
+6. **Frontend Integration**: React.js/Flutter apps consume the AWS-hosted data
+
+**AWS Services Used:**
+- **DynamoDB**: User data, transactions, points, carbon footprint tracking
+- **S3 + CloudFront**: Static assets, public data access, CDN distribution
+- **Lambda**: Serverless functions for data processing
+- **API Gateway**: RESTful API endpoints for frontend
+
+**Result**: Real-time waste tracking system with transparent data accessible via web and mobile apps!
+
 ## Live Smart Bin Activity
 
 The platform provides real-time transparency through a public activity feed that displays:
