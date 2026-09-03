@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { siteConfig } from "../../../config/site";
 
 const transactions = [
@@ -33,14 +34,12 @@ const transactions = [
 
 function TransactionLink() {
   return (
-    <a
-      href={siteConfig.links.stellarExplorer}
-      target="_blank"
-      rel="noopener noreferrer"
+    <Link
+      to="/connect"
       className="text-xs font-semibold text-emerald-600 hover:text-emerald-700 underline"
     >
       View
-    </a>
+    </Link>
   );
 }
 

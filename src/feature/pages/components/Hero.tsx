@@ -35,15 +35,16 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={() => scrollToSection("#activity")}
-                className="px-6 py-3 rounded-lg bg-emerald-600 text-white font-medium hover:bg-emerald-700 transition-colors"
+                className="px-6 py-3 rounded-lg bg-emerald-600 text-white font-medium hover:bg-emerald-700 transition-colors inline-flex items-center justify-center gap-2"
               >
-                Launch Pilot Dashboard
+                Start on Testnet
+                <span>→</span>
               </button>
               <a
                 href={siteConfig.links.stellarExplorer}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 rounded-lg border border-slate-300 text-slate-900 font-medium hover:bg-slate-50 transition-colors"
+                className="px-6 py-3 rounded-lg border border-slate-300 text-slate-900 font-medium hover:bg-slate-50 transition-colors text-center"
               >
                 View Stellar Explorer
               </a>

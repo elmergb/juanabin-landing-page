@@ -57,10 +57,20 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
+                    href={links.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-emerald-400 transition-colors"
+                  >
+                    Facebook
+                  </a>
+                </li>
+                <li>
+                  <a
                     href={links.contact}
                     className="hover:text-emerald-400 transition-colors"
                   >
-                    Contact
+                    Email Us
                   </a>
                 </li>
               </ul>

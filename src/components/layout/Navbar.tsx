@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Leaf, Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { primaryNavigation, siteConfig } from "../../config/site";
@@ -9,6 +10,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const scrollToSection = useScrollToSection();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -16,9 +18,12 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNavigation = (href :string) => {
+  const handleNavigation = (href: string) => {
     setIsOpen(false);
-    scrollToSection(href);
+    // Only scroll to section if it's a hash link
+    if (href.startsWith("#")) {
+      scrollToSection(href);
+    }
   };
 
   return (
@@ -44,15 +49,25 @@ export default function Navbar() {
         </a>
 
         <div className="hidden md:flex items-center gap-8">
-          {primaryNavigation.map((link) => (
-            <button
-              key={link.href}
-              onClick={() => handleNavigation(link.href)}
-              className="text-sm text-slate-600 hover:text-emerald-600 transition-colors"
-            >
-              {link.label}
-            </button>
-          ))}
+          {primaryNavigation.map((link) =>
+            link.href.startsWith("#") ? (
+              <button
+                key={link.href}
+                onClick={() => handleNavigation(link.href)}
+                className="text-sm text-slate-600 hover:text-emerald-600 transition-colors"
+              >
+                {link.label}
+              </button>
+            ) : (
+              <Link
+                key={link.href}
+                to={link.href}
+                className="text-sm text-slate-600 hover:text-emerald-600 transition-colors"
+              >
+                {link.label}
+              </Link>
+            )
+          )}
         </div>
 
         <button
@@ -80,15 +95,26 @@ export default function Navbar() {
           className="md:hidden bg-white border-t"
         >
           <div className="px-4 py-4 space-y-3">
-            {primaryNavigation.map((link) => (
-              <button
-                key={link.href}
-                onClick={() => handleNavigation(link.href)}
-                className="block w-full text-left py-2 text-slate-600 hover:text-emerald-600"
-              >
-                {link.label}
-              </button>
-            ))}
+            {primaryNavigation.map((link) =>
+              link.href.startsWith("#") ? (
+                <button
+                  key={link.href}
+                  onClick={() => handleNavigation(link.href)}
+                  className="block w-full text-left py-2 text-slate-600 hover:text-emerald-600"
+                >
+                  {link.label}
+                </button>
+              ) : (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="block w-full text-left py-2 text-slate-600 hover:text-emerald-600"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
             <button
               onClick={() => handleNavigation("#activity")}
               className="w-full mt-4 px-4 py-2 rounded-lg bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-700"
