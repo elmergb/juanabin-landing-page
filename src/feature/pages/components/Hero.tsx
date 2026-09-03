@@ -16,20 +16,20 @@ export default function Hero() {
           >
             <div className="mb-6">
               <span className="text-xs font-semibold text-emerald-600 tracking-wide">
-                STELLAR-POWERED • BARANGAY CLIMATE FINTECH
+                SMART BIN TECHNOLOGY • CAMERA IOT POWERED
               </span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-              Build on Stellar.
+              Smart Waste Management.
               <br />
-              Operate with JuanaBin.
+              Powered by JuanaBin.
             </h1>
 
             <p className="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
-              Transform household waste segregation into instant, transparent
-              micro-rewards, helping Philippine barangays reduce waste while
-              expanding financial inclusion.
+              Revolutionary smart bin with Camera IoT technology that automatically
+              detects, validates, and weighs waste, rewarding proper segregation
+              and building cleaner Philippine communities.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -60,21 +60,23 @@ export default function Hero() {
               <div className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="text-xs font-semibold text-emerald-600 mb-4 flex items-center gap-2">
                   <span className="w-2 h-2 bg-emerald-500 rounded-full" />
-                  VERIFIED ON STELLAR
+                  SMART BIN ACTIVE
                 </div>
 
                 <div className="mb-6">
-                  <p className="text-sm text-slate-500 mb-2">WASTE COLLECTED</p>
+                  <p className="text-sm text-slate-500 mb-2">WASTE DETECTED</p>
                   <p className="text-4xl font-bold text-slate-900">2.4 kg</p>
+                  <p className="text-sm text-slate-600 mt-1">PET Plastic</p>
                 </div>
 
                 <div className="pt-6 border-t">
                   <p className="text-sm text-slate-500 mb-2">
-                    ESTIMATED REWARD
+                    REWARD POINTS
                   </p>
                   <p className="text-3xl font-bold text-emerald-600">
-                    + 1.85 JBIN
+                    + 240 pts
                   </p>
+                  <p className="text-xs text-slate-500 mt-1">Redeemable at 7-11</p>
                 </div>
 
                 <div className="mt-6">
@@ -84,7 +86,7 @@ export default function Hero() {
                     className="flex items-center gap-2 text-xs text-emerald-600"
                   >
                     <span className="w-2 h-2 bg-emerald-500 rounded-full" />
-                    Transaction recorded
+                    Camera validated • 98% accuracy
                   </motion.div>
                 </div>
               </div>

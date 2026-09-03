@@ -63,12 +63,12 @@ export default function ConnectConsole() {
 
           <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
             <h2 className="text-2xl font-bold text-slate-900 mb-3">
-              Connect to Console
+              Connect to Dashboard
             </h2>
             <p className="text-slate-600 mb-6">
-              Log in to manage developer projects, verify smart contracts,
+              Log in to manage your smart bins, view waste analytics,
               <br />
-              and view real-time Stellar events.
+              track reward points, and monitor environmental impact.
             </p>
 
             {/* Error Message inside card */}

@@ -1,44 +1,44 @@
-import { Clock, ShieldCheck, Users, Zap } from "lucide-react";
+import { Camera, Smartphone, Recycle, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
 
 const features = [
   {
-    icon: Zap,
-    title: "Ultra-Low Transaction Costs",
+    icon: Camera,
+    title: "Camera IoT Technology",
     description:
-      "Stellar's low transaction costs make blockchain-based micro-rewards practical for small-value community transactions.",
+      "Advanced camera system automatically identifies waste type, validates proper segregation, and measures weight with 98% accuracy - no manual verification needed.",
   },
   {
-    icon: Users,
-    title: "Financial Inclusion",
+    icon: Smartphone,
+    title: "Mobile App Integration",
     description:
-      "A simple mobile-first authentication experience can provision access to a Stellar wallet without requiring users to understand blockchain infrastructure.",
+      "Track your waste disposal, view reward points, redeem at partner stores like 7-11, and monitor your environmental impact through our intuitive mobile app.",
   },
   {
-    icon: Clock,
-    title: "Fast Settlement",
+    icon: Recycle,
+    title: "Smart Lid System",
     description:
-      "Stellar transactions are designed for fast settlement, making them suitable for near-real-time reward distribution.",
+      "Intelligent lid only opens when correct waste type is detected, ensuring proper segregation. Built-in compaction reduces volume and odor control keeps bins fresh.",
   },
   {
-    icon: ShieldCheck,
-    title: "Auditability",
+    icon: TrendingUp,
+    title: "Real Rewards",
     description:
-      "Verified collection events can be associated with immutable on-chain transaction records, creating a transparent audit trail.",
+      "Earn points for every proper disposal, redeemable at local stores and partner establishments. Your waste becomes valuable community currency.",
   },
 ];
 
-export default function WhyStellar() {
+export default function WhyJuanaBin() {
   return (
-    <section id="why-stellar" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="why-juanabin" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-900 mb-4">
-            Why Stellar?
+            Why JuanaBin?
           </h2>
           <p className="text-lg text-slate-600">
-            Infrastructure built for small, frequent, transparent community
-            payments.
+            Smart technology that makes waste segregation effortless, 
+            rewarding, and impactful for every Filipino household.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-8">

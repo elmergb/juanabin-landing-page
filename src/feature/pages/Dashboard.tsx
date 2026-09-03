@@ -38,42 +38,37 @@ export default function Dashboard() {
     },
     {
       icon: <Activity className="w-4 h-4" />,
-      label: "Build",
+      label: "Smart Bin Status",
       children: [
-        { label: "Integration", href: "#integration", disabled: true },
-        { label: "API Keys", href: "#api-keys", disabled: true },
-        { label: "Wallets", href: "#wallets", disabled: true },
+        { label: "Bin Capacity", href: "#capacity", disabled: true },
+        { label: "Real-time Monitoring", href: "#monitoring", disabled: true },
+        { label: "Maintenance Alerts", href: "#alerts", disabled: true },
       ],
     },
     {
       icon: <Activity className="w-4 h-4" />,
-      label: "Verify",
+      label: "Waste Analytics",
       children: [
-        { label: "Contracts", href: "#contracts", disabled: true },
-        { label: "Public Proof", href: "#public-proof", disabled: true },
-      ],
-    },
-    {
-      icon: <Activity className="w-4 h-4" />,
-      label: "Observe",
-      children: [
-        { label: "Events", href: "#events", disabled: true },
-        { label: "Webhooks", href: "#webhooks", disabled: true },
-        { label: "Debug", href: "#debug", disabled: true },
+        { label: "Collection History", href: "#history", disabled: true },
+        { label: "Waste Types", href: "#types", disabled: true },
+        { label: "Environmental Impact", href: "#impact", disabled: true },
       ],
     },
     {
       icon: <Wallet className="w-4 h-4" />,
-      label: "Pay",
+      label: "Rewards",
       children: [
-        { label: "Payments", href: "#payments", disabled: true },
+        { label: "My Points", href: "#points", disabled: true },
+        { label: "Redemption", href: "#redeem", disabled: true },
+        { label: "Transaction History", href: "#transactions", disabled: true },
       ],
     },
     {
       icon: <Settings className="w-4 h-4" />,
-      label: "Settle",
+      label: "Settings",
       children: [
-        { label: "Settlement", href: "#settlement", disabled: true },
+        { label: "Profile", href: "#profile", disabled: true },
+        { label: "Notifications", href: "#notifications", disabled: true },
       ],
     },
     {
@@ -186,11 +181,10 @@ export default function Dashboard() {
             {/* Header */}
             <div className="mb-8">
               <h1 className="text-3xl font-bold text-slate-900 mb-2">
-                Dashboard
+                JuanaBin Dashboard
               </h1>
               <p className="text-slate-600">
-                Monitor your waste management activities and earnings on the
-                Stellar blockchain.
+                Monitor your smart bin usage, waste collection activities, and earned rewards.
               </p>
             </div>
 
@@ -199,39 +193,39 @@ export default function Dashboard() {
               <div className="bg-white p-6 rounded-lg border border-slate-200">
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="text-sm font-medium text-slate-600">
-                    Total Earnings
+                    Waste Collected This Month
                   </h3>
                   <Activity className="w-5 h-5 text-emerald-600" />
                 </div>
-                <p className="text-2xl font-bold text-slate-900">₱12,450</p>
+                <p className="text-2xl font-bold text-slate-900">45.2 kg</p>
                 <p className="text-xs text-emerald-600 mt-1">
-                  +15% from last month
+                  +12% from last month
                 </p>
               </div>
 
               <div className="bg-white p-6 rounded-lg border border-slate-200">
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="text-sm font-medium text-slate-600">
-                    Waste Collected
+                    Reward Points Earned
                   </h3>
                   <Activity className="w-5 h-5 text-blue-600" />
                 </div>
-                <p className="text-2xl font-bold text-slate-900">450 kg</p>
+                <p className="text-2xl font-bold text-slate-900">450 pts</p>
                 <p className="text-xs text-blue-600 mt-1">
-                  +8% from last month
+                  Redeemable at 7-11
                 </p>
               </div>
 
               <div className="bg-white p-6 rounded-lg border border-slate-200">
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="text-sm font-medium text-slate-600">
-                    Transactions
+                    Proper Segregations
                   </h3>
                   <Activity className="w-5 h-5 text-purple-600" />
                 </div>
                 <p className="text-2xl font-bold text-slate-900">128</p>
                 <p className="text-xs text-purple-600 mt-1">
-                  +22% from last month
+                  98% accuracy rate
                 </p>
               </div>
             </div>
@@ -240,14 +234,20 @@ export default function Dashboard() {
             <div className="bg-white rounded-lg border border-slate-200">
               <div className="p-6 border-b border-slate-200">
                 <h2 className="text-lg font-semibold text-slate-900">
-                  Recent Activity
+                  Recent Smart Bin Activity
                 </h2>
               </div>
               <div className="p-6">
                 <div className="space-y-4">
-                  {[1, 2, 3, 4, 5].map((item) => (
+                  {[
+                    { type: "PET Plastic", weight: "0.85 kg", points: "+50", time: "2 hours ago" },
+                    { type: "Paper", weight: "1.2 kg", points: "+60", time: "5 hours ago" },
+                    { type: "Organic Waste", weight: "2.4 kg", points: "+40", time: "1 day ago" },
+                    { type: "Metal", weight: "0.5 kg", points: "+30", time: "1 day ago" },
+                    { type: "Glass", weight: "1.1 kg", points: "+55", time: "2 days ago" },
+                  ].map((item, index) => (
                     <div
-                      key={item}
+                      key={index}
                       className="flex items-center justify-between py-3 border-b border-slate-100 last:border-0"
                     >
                       <div className="flex items-center gap-4">
@@ -256,18 +256,18 @@ export default function Dashboard() {
                         </div>
                         <div>
                           <p className="text-sm font-medium text-slate-900">
-                            Waste Segregation Reward
+                            {item.type} Collected
                           </p>
                           <p className="text-xs text-slate-500">
-                            2 hours ago
+                            {item.weight} • {item.time}
                           </p>
                         </div>
                       </div>
                       <div className="text-right">
                         <p className="text-sm font-semibold text-emerald-600">
-                          +₱50
+                          {item.points} pts
                         </p>
-                        <p className="text-xs text-slate-500">Confirmed</p>
+                        <p className="text-xs text-slate-500">Verified</p>
                       </div>
                     </div>
                   ))}
@@ -281,12 +281,11 @@ export default function Dashboard() {
                 Getting Started with JuanaBin
               </h2>
               <p className="text-slate-600 mb-4">
-                Learn how to maximize your earnings and contribute to a cleaner
-                community.
+                Learn how to use the smart bin features and maximize your reward points.
               </p>
               <div className="flex gap-4">
                 <button className="px-4 py-2 bg-emerald-600 text-white rounded-lg text-sm font-medium hover:bg-emerald-700 transition-colors">
-                  View Guides
+                  View User Guide
                 </button>
                 <a
                   href="/connect"

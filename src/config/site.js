@@ -12,10 +12,10 @@ export const siteConfig = {
 
 export const primaryNavigation = [
   { label: 'Dashboard', href: '/dashboard' },
+  { label: 'Features', href: '#features' },
   { label: 'How It Works', href: '#how-it-works' },
   { label: 'Calculator', href: '#calculator' },
-  { label: 'Why Stellar', href: '#why-stellar' },
+  { label: 'Why JuanaBin', href: '#why-juanabin' },
   { label: 'Live Activity', href: '#activity' },
-  { label: 'Compliance', href: '#compliance' },
   { label: 'FAQ', href: '#faq' },
 ]

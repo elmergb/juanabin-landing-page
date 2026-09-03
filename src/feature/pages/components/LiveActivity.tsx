@@ -4,31 +4,31 @@ import { siteConfig } from "../../../config/site";
 const transactions = [
   {
     time: "21:42",
-    officer: "BRGY-014",
+    officer: "BIN-014",
     type: "PET Plastic",
     weight: "850 g",
-    jbin: 0.85,
+    jbin: 85,
   },
   {
     time: "21:37",
-    officer: "BRGY-009",
+    officer: "BIN-009",
     type: "Sachet",
     weight: "420 g",
-    jbin: 0.21,
+    jbin: 42,
   },
   {
     time: "21:31",
-    officer: "BRGY-021",
+    officer: "BIN-021",
     type: "Organic",
     weight: "1.2 kg",
-    jbin: 0.24,
+    jbin: 120,
   },
   {
     time: "21:25",
-    officer: "BRGY-006",
+    officer: "BIN-006",
     type: "PET Plastic",
     weight: "650 g",
-    jbin: 0.65,
+    jbin: 65,
   },
 ];
 
@@ -51,15 +51,15 @@ export default function LiveActivity() {
           <div className="flex items-center gap-3 mb-4">
             <span className="w-3 h-3 bg-emerald-500 rounded-full" />
             <span className="text-xs font-semibold text-emerald-700">
-              Stellar Testnet
+              Smart Bins Live
             </span>
           </div>
           <h2 className="text-4xl font-bold text-slate-900 mb-4">
-            Live Activity
+            Live Smart Bin Activity
           </h2>
           <p className="text-lg text-slate-600">
-            See how verified collection events can be recorded transparently on
-            Stellar Testnet.
+            Real-time data from JuanaBin smart bins across the Philippines,
+            automatically detecting and validating waste disposal.
           </p>
         </div>
         <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
@@ -69,11 +69,11 @@ export default function LiveActivity() {
                 <tr className="bg-slate-50 border-b">
                   {[
                     "Timestamp",
-                    "Officer ID",
+                    "Bin ID",
                     "Waste Type",
                     "Weight",
-                    "JBIN",
-                    "Stellar Tx",
+                    "Points",
+                    "Details",
                   ].map((heading) => (
                     <th
                       key={heading}
@@ -103,7 +103,7 @@ export default function LiveActivity() {
                       {tx.weight}
                     </td>
                     <td className="px-6 py-4 text-sm font-semibold text-emerald-600">
-                      {tx.jbin}
+                      {tx.jbin} pts
                     </td>
                     <td className="px-6 py-4">
                       <TransactionLink />
@@ -129,7 +129,7 @@ export default function LiveActivity() {
                 <div className="flex justify-between text-sm">
                   <span className="text-slate-600">{tx.weight}</span>
                   <span className="font-semibold text-emerald-600">
-                    {tx.jbin} JBIN
+                    {tx.jbin} pts
                   </span>
                 </div>
               </div>

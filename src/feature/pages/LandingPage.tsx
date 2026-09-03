@@ -2,13 +2,14 @@ import Navbar from "../../components/layout/Navbar";
 import Footer from "../../components/layout/Footer";
 import HowItWorks from "./components/HowItWorks";
 import Calculator from "./components/Calculator";
-import WhyStellar from "./components/WhyStellar";
+import WhyJuanaBin from "./components/WhyJuanaBin";
 import LiveActivity from "./components/LiveActivity";
 import Compliance from "./components/Compliance";
 import Hero from "./components/Hero";
 import MetricsTicker from "./components/MetricsTicker";
 import FAQ from "./components/FAQ";
 import FinalCTA from "./components/FinalCTA";
+import Features from "./components/Features";
 
 export default function LandingPage() {
   return (
@@ -16,9 +17,10 @@ export default function LandingPage() {
       <Navbar />
       <Hero />
       <MetricsTicker />
+      <Features />
       <HowItWorks />
       <Calculator />
-      <WhyStellar />
+      <WhyJuanaBin />
       <LiveActivity />
       <Compliance />
       <FAQ />

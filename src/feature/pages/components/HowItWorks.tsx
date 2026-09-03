@@ -13,13 +13,13 @@ export default function HowItWorks() {
       icon: Scan,
       title: "Scan & Log",
       description:
-        "Barangay officers verify and weigh collected materials, then record the transaction digitally. Authentication is handled through Kinde, while the reward transaction is recorded on Stellar.",
+        "The smart JuanaBin uses Camera IoT technology to automatically detect waste type, verify proper segregation, and weigh collected materials. The smart lid only opens when correct waste is detected.",
     },
     {
       icon: WalletCards,
       title: "Earn & Redeem",
       description:
-        "Verified households receive JBIN utility rewards through a Stellar wallet and can redeem eligible rewards for local artisan products and community goods.",
+        "Earn reward points for every proper disposal, viewable through the mobile app. Redeem points at partner stores like 7-11 for local artisan products and community goods.",
     },
   ];
 
@@ -28,11 +28,11 @@ export default function HowItWorks() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-900 mb-4">
-            How Segregate-to-Earn Works
+            How JuanaBin Works
           </h2>
           <p className="text-lg text-slate-600">
-            A simple three-step process connecting household waste segregation,
-            barangay verification, and transparent digital rewards.
+            A simple three-step process: segregate at home, let our smart bin
+            validate with Camera IoT, and earn instant rewards.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
@@ -69,11 +69,11 @@ export default function HowItWorks() {
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center">
             {[
-              "Waste",
-              "Barangay Verification",
-              "JBIN Reward",
-              "Stellar Wallet",
-              "Community Goods",
+              "Segregate Waste",
+              "Camera Detects",
+              "Smart Bin Validates",
+              "Earn Points",
+              "Redeem Rewards",
             ].map((label, idx) => (
               <div key={label} className="contents">
                 <div

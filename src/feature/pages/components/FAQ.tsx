@@ -4,29 +4,29 @@ import { motion } from "framer-motion";
 
 const faqs = [
   {
-    question: "Do households need a bank account or crypto experience?",
+    question: "How does the Camera IoT technology work?",
     answer:
-      "No. The intended experience is designed to be mobile-first and simple for users without prior blockchain knowledge. Authentication can be handled through Kinde, while Stellar provides the underlying transaction infrastructure.",
+      "JuanaBin's smart bin uses advanced camera sensors and AI to automatically identify waste types (plastic, paper, organic, metal, glass), validate proper segregation, and measure weight with 98% accuracy. The smart lid only opens when the correct waste type is detected.",
   },
   {
-    question: "Is JBIN a speculative crypto asset?",
+    question: "What rewards can I earn and where can I redeem them?",
     answer:
-      "JBIN is designed as a utility reward within the JuanaBin ecosystem rather than as an investment product. Rewards are intended for redemption within the program for eligible local artisan products and community goods.",
+      "You earn points for every proper waste disposal (100 points = 1kg of recyclable plastic). Points are redeemable at partner stores like 7-11, local artisan shops, and community stores for products and goods.",
   },
   {
-    question: "How does this help my barangay?",
+    question: "How does this help my barangay and the environment?",
     answer:
-      "JuanaBin is designed to encourage household waste segregation, create small community-level incentives, improve waste diversion records, and provide a transparent digital record of verified collection activity.",
+      "JuanaBin encourages proper household waste segregation, reduces landfill waste, improves recycling rates, creates community-level incentives, and provides data to help barangays track their environmental impact and waste diversion efforts.",
   },
   {
-    question: "Why use Stellar instead of a traditional database?",
+    question: "Do I need any technical knowledge to use JuanaBin?",
     answer:
-      "A traditional database can manage records efficiently, while Stellar can provide an additional public transaction layer for reward movements that need transparent and independently verifiable records.",
+      "No technical knowledge required! Simply segregate your waste at home and dispose it in the JuanaBin smart bin. The bin's Camera IoT handles all detection and validation automatically. Track your points through our easy-to-use mobile app.",
   },
   {
-    question: "Is the dashboard using real blockchain data?",
+    question: "What types of waste does JuanaBin accept?",
     answer:
-      "The landing page uses demo/testnet data unless connected to the JuanaBin backend. The production dashboard can retrieve and display actual Stellar transactions.",
+      "JuanaBin smart bins accept biodegradable waste, recyclable paper, PET plastic bottles, sachets, metal cans, and glass containers. Each bin can identify and validate the waste type automatically using Camera IoT technology.",
   },
 ];
 
