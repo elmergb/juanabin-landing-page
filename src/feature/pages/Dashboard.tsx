@@ -85,7 +85,7 @@ export default function Dashboard() {
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-2">
             <LayoutDashboard className="w-5 h-5 text-slate-700" />
-            <span className="font-semibold text-slate-900">JuanaBin Dashboard</span>
+            <span className="font-semibold text-slate-900">JuanaBin PH Dashboard</span>
           </div>
         </div>
         
@@ -108,7 +108,7 @@ export default function Dashboard() {
           <div className="p-4">
             <div className="mb-6">
               <h2 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">
-                JuanaBin Platform
+                JuanaBin PH Platform
               </h2>
             </div>
 
@@ -181,7 +181,7 @@ export default function Dashboard() {
             {/* Header */}
             <div className="mb-8">
               <h1 className="text-3xl font-bold text-slate-900 mb-2">
-                JuanaBin Dashboard
+                JuanaBin PH Dashboard
               </h1>
               <p className="text-slate-600">
                 Monitor your smart bin usage, waste collection activities, and earned rewards.
@@ -278,7 +278,7 @@ export default function Dashboard() {
             {/* Getting Started Section */}
             <div className="mt-8 bg-gradient-to-br from-emerald-50 to-blue-50 rounded-lg border border-emerald-200 p-6">
               <h2 className="text-xl font-bold text-slate-900 mb-2">
-                Getting Started with JuanaBin
+                Getting Started with JuanaBin PH
               </h2>
               <p className="text-slate-600 mb-4">
                 Learn how to use the smart bin features and maximize your reward points.

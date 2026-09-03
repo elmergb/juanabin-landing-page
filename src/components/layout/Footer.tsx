@@ -10,13 +10,18 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 mb-8">
           <div>
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-3 mb-4">
               <img
                 src={juanabinLogo}
                 alt="JuanaBin PH"
                 className="w-8 h-8"
               />
-              <span className="text-lg font-bold">{siteConfig.name}</span>
+              <div className="flex flex-col">
+                <span className="text-lg font-bold leading-tight">{siteConfig.name}</span>
+                <span className="text-xs text-emerald-400 font-medium leading-tight">
+                  {siteConfig.team}
+                </span>
+              </div>
             </div>
             <p className="text-slate-400">{siteConfig.tagline}</p>
           </div>

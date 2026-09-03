@@ -7,7 +7,7 @@ export default function HowItWorks() {
       icon: Leaf,
       title: "Approach the Bin",
       description:
-        "Walk up to the JuanaBin smart bin with your segregated waste - biodegradable, non-biodegradable, or high-value recyclables like PET bottles and sachets.",
+        "Walk up to the JuanaBin PH smart bin with your segregated waste - biodegradable, non-biodegradable, or high-value recyclables like PET bottles and sachets.",
     },
     {
       icon: Scan,
@@ -28,7 +28,7 @@ export default function HowItWorks() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-900 mb-4">
-            How JuanaBin Works
+            How JuanaBin PH Works
           </h2>
           <p className="text-lg text-slate-600">
             A simple three-step process: segregate at home, let our smart bin

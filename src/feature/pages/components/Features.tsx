@@ -104,7 +104,7 @@ export default function Features() {
               Smart Bin Features
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              JuanaBin combines cutting-edge IoT technology with practical waste
+              JuanaBin PH combines cutting-edge IoT technology with practical waste
               management features to create the most advanced smart waste
               solution for Philippine communities.
             </p>

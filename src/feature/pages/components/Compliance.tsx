@@ -61,7 +61,7 @@ export default function Compliance() {
               Built for Transparent Barangay Operations
             </h2>
             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-              JuanaBin is designed to help organize waste diversion records,
+              JuanaBin PH is designed to help organize waste diversion records,
               household participation, collection weights, reward distribution
               records, digital audit trails, and exportable reports for LGU
               administrators and environmental officers.

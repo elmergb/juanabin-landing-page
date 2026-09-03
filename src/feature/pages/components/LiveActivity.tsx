@@ -58,7 +58,7 @@ export default function LiveActivity() {
             Live Smart Bin Activity
           </h2>
           <p className="text-lg text-slate-600">
-            Real-time data from JuanaBin smart bins across the Philippines,
+            Real-time data from JuanaBin PH smart bins across the Philippines,
             automatically detecting and validating waste disposal.
           </p>
         </div>

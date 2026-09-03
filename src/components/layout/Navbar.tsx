@@ -35,17 +35,22 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <a
           href="#top"
-          className="flex items-center gap-2 flex-shrink-0"
-          aria-label={`${siteConfig.name} home`}
+          className="flex items-center gap-3 flex-shrink-0"
+          aria-label="JuanaBin PH home"
         >
           <img
             src={juanabinLogo}
             alt="JuanaBin PH"
             className="w-8 h-8"
           />
-          <span className="text-lg font-bold text-slate-900">
-            {siteConfig.name}
-          </span>
+          <div className="flex flex-col">
+            <span className="text-lg font-bold text-slate-900 leading-tight">
+              JuanaBin PH
+            </span>
+            <span className="text-xs text-emerald-600 font-medium leading-tight">
+              Buslo Builders
+            </span>
+          </div>
         </a>
 
         <div className="hidden lg:flex items-center gap-4 xl:gap-8">

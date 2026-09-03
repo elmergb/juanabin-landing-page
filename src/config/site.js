@@ -1,5 +1,6 @@
 export const siteConfig = {
-  name: 'JuanaBin',
+  name: 'JuanaBin PH',
+  team: 'Buslo Builders',
   tagline: 'Basket of Hope. Sort Right. Shoot Like a Champion.',
   busloTagline: 'BusloPH - Building habits through gamified waste segregation',
   links: {

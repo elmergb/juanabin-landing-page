@@ -27,7 +27,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
-              JuanaBin turns waste disposal into a game. "Shoot" your trash like basketball,
+              JuanaBin PH turns waste disposal into a game. "Shoot" your trash like basketball,
               AI sensors detect if it's correct, the hoop opens, and you earn rewards
               redeemable at stores like 7-11. Building habits through fun, not fines.
             </p>
