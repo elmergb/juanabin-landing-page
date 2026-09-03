@@ -35,7 +35,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <a
           href="#top"
-          className="flex items-center gap-2"
+          className="flex items-center gap-2 flex-shrink-0"
           aria-label={`${siteConfig.name} home`}
         >
           <img
@@ -48,13 +48,13 @@ export default function Navbar() {
           </span>
         </a>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-4 xl:gap-8">
           {primaryNavigation.map((link) =>
             link.href.startsWith("#") ? (
               <button
                 key={link.href}
                 onClick={() => handleNavigation(link.href)}
-                className="text-sm text-slate-600 hover:text-emerald-600 transition-colors"
+                className="text-sm text-slate-600 hover:text-emerald-600 transition-colors whitespace-nowrap"
               >
                 {link.label}
               </button>
@@ -62,7 +62,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 to={link.href}
-                className="text-sm text-slate-600 hover:text-emerald-600 transition-colors"
+                className="text-sm text-slate-600 hover:text-emerald-600 transition-colors whitespace-nowrap"
               >
                 {link.label}
               </Link>
@@ -72,7 +72,7 @@ export default function Navbar() {
 
         <button
           onClick={() => handleNavigation("#activity")}
-          className="hidden md:block px-4 py-2 rounded-lg bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-700 transition-colors"
+          className="hidden lg:block px-4 py-2 rounded-lg bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-700 transition-colors whitespace-nowrap flex-shrink-0"
         >
           Launch Pilot
         </button>
@@ -82,7 +82,7 @@ export default function Navbar() {
           aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={isOpen}
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 text-slate-900"
+          className="lg:hidden p-2 text-slate-900"
         >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
